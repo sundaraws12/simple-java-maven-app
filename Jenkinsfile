@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('') {
       steps {
-        readFile 'jenkins'
+        build(job: 'maven', propagate: true, quietPeriod: 10, wait: true)
       }
     }
   }
